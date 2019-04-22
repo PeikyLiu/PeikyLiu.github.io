@@ -386,12 +386,24 @@
                 
               
 
-              <time title="創建時間：2019-04-21 16:27:16 / 修改時間：17:49:36" itemprop="dateCreated datePublished" datetime="2019-04-21T16:27:16+08:00">2019-04-21</time>
+              <time title="創建時間：2019-04-21 16:27:16" itemprop="dateCreated datePublished" datetime="2019-04-21T16:27:16+08:00">2019-04-21</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新於</span>
+                
+                <time title="修改時間：2019-04-22 22:09:10" itemprop="dateModified" datetime="2019-04-22T22:09:10+08:00">2019-04-22</time>
               
             
           </span>
@@ -445,15 +457,195 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+            <h1 id="如何搭建技术博客"><a href="#如何搭建技术博客" class="headerlink" title="如何搭建技术博客"></a>如何搭建技术博客</h1><h2 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h2><h3 id="1-安装hexo"><a href="#1-安装hexo" class="headerlink" title="1.安装hexo"></a>1.安装hexo</h3><pre><code>npm install -g hexo-cli（全局安装）
+</code></pre><h3 id="2-cd到工作目录-blog是你自己的文件夹名字"><a href="#2-cd到工作目录-blog是你自己的文件夹名字" class="headerlink" title="2.cd到工作目录 (blog是你自己的文件夹名字)"></a>2.cd到工作目录 (blog是你自己的文件夹名字)</h3><pre><code>hexo init blog
+</code></pre><h3 id="3-打开-config-yml-全局配置文件-修改theme属性"><a href="#3-打开-config-yml-全局配置文件-修改theme属性" class="headerlink" title="3.打开_config.yml 全局配置文件 修改theme属性"></a>3.打开_config.yml 全局配置文件 修改theme属性</h3><pre><code>theme：next
+</code></pre><h3 id="4-本地跑起hexo"><a href="#4-本地跑起hexo" class="headerlink" title="4.本地跑起hexo"></a>4.本地跑起hexo</h3><pre><code>$ hexo g 打包项目（没上线前可不执行）
+$ hexo s 启动本地web服务器
+</code></pre><h3 id="5-打开-http-localhost：4000-检查是否成功"><a href="#5-打开-http-localhost：4000-检查是否成功" class="headerlink" title="5.打开 http://localhost：4000/ 检查是否成功"></a>5.打开 <a href="http://localhost：4000/" target="_blank" rel="noopener">http://localhost：4000/</a> 检查是否成功</h3><h2 id="推送到Github"><a href="#推送到Github" class="headerlink" title="推送到Github"></a>推送到Github</h2><h3 id="6-修改hexo项目的根目录下的全局配置文件-config-yml"><a href="#6-修改hexo项目的根目录下的全局配置文件-config-yml" class="headerlink" title="6.修改hexo项目的根目录下的全局配置文件_config.yml"></a>6.修改hexo项目的根目录下的全局配置文件_config.yml</h3><pre><code>1 deploy:
+2 type: git
+3 repo: https://github.com/PeikyLiu/PeikyLiu.github.io
+4 branch: master
+</code></pre><h3 id="7-为一键部署做准备-安装git-hexo-发布插件"><a href="#7-为一键部署做准备-安装git-hexo-发布插件" class="headerlink" title="7.为一键部署做准备 安装git hexo 发布插件"></a>7.为一键部署做准备 安装git hexo 发布插件</h3><pre><code>$ npm install hexo-deployer-git --save（显示问题前面是两个-）
+</code></pre><h3 id="8-上线"><a href="#8-上线" class="headerlink" title="8.上线"></a>8.上线</h3><pre><code>$ hexo clean 清理缓存
+$ hexo g 打包项目
+$ hexo d 一键部署
+</code></pre><h3 id="9-发布文章"><a href="#9-发布文章" class="headerlink" title="9.发布文章"></a>9.发布文章</h3><pre><code>采用md语法编写文章 原因简单易上手操作
+由于hexo打包（hexo g）时候 会编译成 对应的html css js等线上部署的文章
+那么 我们要对文章 和 项目的主体 进行相关的配置
+</code></pre>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/21/diary1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Peiky Liu">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Peiky Liu">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/21/diary1/" class="post-title-link" itemprop="url">日记第一篇</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+
+              
+                
+              
+
+              <time title="創建時間：2019-04-21 00:00:00" itemprop="dateCreated datePublished" datetime="2019-04-21T00:00:00+08:00">2019-04-21</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新於</span>
+                
+                <time title="修改時間：2019-04-22 21:38:44" itemprop="dateModified" datetime="2019-04-22T21:38:44+08:00">2019-04-22</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/diary/" itemprop="url" rel="index"><span itemprop="name">diary</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>今天学了map join 模版字符的使用 map返回一个变量的数组 join是使几个字符串变成一段字符串 模版字符使可以省略很多字符串组成需要的符号 例如 let abc = ‘1,2,3’ let arr = abc + ‘1’+pop let arr = ${}</p>
 
           
         
@@ -537,7 +729,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -552,7 +744,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
+                      
+                    
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">分類</span>
                   
                 </div>
@@ -567,7 +761,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
+                      
+                    
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">標籤</span>
                   
                 </div>
@@ -773,5 +969,5 @@
 
   
 
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"right","hOffset":0,"vOffset":-20},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>
